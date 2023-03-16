@@ -8,6 +8,14 @@
     flex-direction: column;
 }
 
-.marg-bot{
-    margin-bottom: 2vh;
+.nav-space{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-auth{
+    width: 30%;
+    margin: auto;
+    border: 2px solid black;
+    padding: 20px;
 }
