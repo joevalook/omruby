@@ -139,6 +139,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-x86_64-darwin)
       racc (~> 1.4)
+    pg (1.4.6)
     popper_js (2.11.6)
     public_suffix (5.0.1)
     puma (4.3.12)
@@ -238,6 +239,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-rails
+  pg
   puma (~> 4.3.12)
   rails (~> 7.0.4, >= 7.0.4.3)
   selenium-webdriver
