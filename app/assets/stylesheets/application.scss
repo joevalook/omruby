@@ -1,1 +1,13 @@
 @import "bootstrap";
+@import "pages";
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.marg-bot{
+    margin-bottom: 2vh;
+}
