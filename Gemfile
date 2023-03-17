@@ -11,6 +11,9 @@ gem "sprockets-rails"
 
 gem "devise"
 
+gem 'activeadmin'
+
+gem 'inherited_resources'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 4.3.12"
 
