@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "pages";
+@import "auth";
 
 .center{
     display: flex;
@@ -14,8 +15,12 @@
 }
 
 .box-auth{
-    width: 30%;
+    width: 400px;
+    height: 50vh;
     margin: auto;
     border: 2px solid black;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
