@@ -1,0 +1,22 @@
+#tweets {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweetBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.actionButtons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.editDestroy{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+   
+}

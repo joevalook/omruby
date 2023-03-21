@@ -31,18 +31,25 @@
                 <li class="navitem">
                     <%= link_to "Contact" , contact_path, class: "nav-link" %>
                 </li>
+                <li class="navitem">
+                    <%= link_to "Tweets" , tweets_path, class: "nav-link" %>
+                </li>
+
               </ul>
               <ul class="nav navbar-nav">
                 <% if user_signed_in? %>
-                  <li class="navitem float-end">
-                      <%= link_to "Logout" , signout_path, method: :delete, class: "nav-link" %>
+                <li class="navitem float-end ">
+                    <%= link_to "#{current_user.email}" , tweets_path, class: "nav-link" %>
+                </li>
+                  <li >
+                      <%= link_to "Logout" , signout_path, method: :delete, class: "btn btn-primary" %>
                   </li>
                 <% else %>
-                  <li class="navitem float-end">
-                      <%= link_to "Sign Up" , signup_path, class: "nav-link" %>
+                  <li >
+                      <%= link_to "Sign Up" , signup_path, class: "btn btn-primary m-1" %>
                   </li>
-                  <li class="navitem float-end">
-                      <%= link_to "Login" , signin_path, class: "nav-link" %>
+                  <li >
+                      <%= link_to "Login" , signin_path, class: "btn btn-primary m-1" %>
                   </li>
                 <% end %>
             </ul>

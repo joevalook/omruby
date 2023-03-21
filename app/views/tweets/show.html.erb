@@ -1,0 +1,22 @@
+<div class="container">
+  <div id="<%= dom_id @tweet %>" class="tweetBox">
+
+     <span><strong>User: </strong> <%= " " + @tweet.user.email %></span>
+     <br>
+     <span><strong>Content: </strong> <%= " " + @tweet.content %></span>
+
+  
+  </div>
+
+<div class="actionButtons">
+  <div class="editDestroy">
+    <% if @tweet.user == current_user %>
+      <%= link_to "Edit", edit_tweet_path(@tweet), class: "btn btn-warning"%> 
+      <%= button_to "Delete", @tweet, method: :delete, class: "btn btn-danger" %>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to "Back to News Feed", tweets_path, class: "btn btn-primary" %>
+  </div>
+</div>
+</div>

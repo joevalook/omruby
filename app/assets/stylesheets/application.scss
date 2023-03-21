@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "pages";
 @import "auth";
+@import "tweets";
 
 .center{
     display: flex;
@@ -17,10 +18,13 @@
 .box-auth{
     width: 400px;
     height: 50vh;
-    margin: auto;
-    border: 2px solid black;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
 }
