@@ -1,25 +1,16 @@
-<div class="container">
+<div class="container sml">
 
   <h1>Tweets</h1>
 
-  <table class="table">
-    <tr>
-      <th>User</th>
-      <th>Content</th>
-      <th></th>
-    </tr>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <%= render tweet %>
-          <td class="justify-content-center">
-            <%= link_to "View Tweet" , tweet, class:"btn btn-info ms-3" %>
-          </td>
-      </tr>
-      <% end %>
-  </table>
+<% if user_signed_in? %>
+  <%= link_to "New tweet" , new_tweet_path, class: "btn btn-primary" %>
+<% end %>
 
-  <% if user_signed_in? %>
-    <%= link_to "New tweet" , new_tweet_path, class: "btn btn-primary" %>
-  <% end %>
+
+    <% for a in 1..(@tweets.length()) do  %>
+        <% tweet = @tweets[@tweets.length()-a]  %>
+        <%= render partial: "tweet", locals: { tweet: tweet, avatars: @avatars} %>
+      <% end %>
+
 
 </div>

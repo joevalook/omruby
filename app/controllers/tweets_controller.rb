@@ -5,6 +5,9 @@ class TweetsController < ApplicationController
   # GET /tweets or /tweets.json
   def index
     @tweets = Tweet.all
+    @avatars = ["https://i.imgur.com/nlhLi3I.png","https://i.imgur.com/z5LNkkB.png","https://i.imgur.com/v0JXau2.png","https://i.imgur.com/lRUnDgU.png", "https://i.imgur.com/3GvwNBf.png","https://i.imgur.com/73hZDYK.png","https://i.imgur.com/5fUVPRP.png","https://i.imgur.com/DVpDmdR.png","https://i.imgur.com/2WZtOD6.png", "https://i.imgur.com/ilT4JDe.png"]
+    
+    
   end
 
   # GET /tweets/1 or /tweets/1.json
@@ -62,7 +65,6 @@ class TweetsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
-      puts "this is the output: #{current_user.tweets.find_by(params[:id]).content}"
       if current_user.tweets.find_by id:(params[:id])
         @tweet = current_user.tweets.find(params[:id])
       else 

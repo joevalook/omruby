@@ -1,9 +1,29 @@
-<div id="<%= dom_id tweet %>" class="tweetBox">
-  <td>
-    <%= tweet.user.email %>
-  </td>
-  <td class="w-50">
-    <%= tweet.content %>
-  </td>
+<article class="tweets" id="<%= dom_id tweet %>">
+  <header class="oppositeSide ">
+    <div class="picName">
+      <div class="imageBox" >
+        <% avatar = avatars[rand(avatars.length())]%>
+        <img src=<%= avatar %> alt="Random Person Face">
+      </div>
+      <div >
+        <p style = "margin-left: 10px;"><%=tweet.user.name%></p>
+      </div>
+    </div>
+    <div class="handle">
+      <p>@<%=tweet.user.handle%></p>
+    </div>
+  </header>
+  <p class="tweetContainer">
+  <%= tweet.content %>
+  </p>
+  <footer class = "oppositeSide small">
+    <span> <%= time_ago_in_words(tweet.created_at) %> ago</span>
+    <%= link_to "View Tweet" , tweet, class:"btn btn-info ms-3" %>
+    <div class = "horizontal">
 
-</div>
+      <i class="fa-solid fa-flag icon1"></i>
+      <i class="fa-solid fa-retweet icon2"></i>
+      <i class="fa-solid fa-heart icon3"></i>
+    </div>
+  </footer>
+</article>

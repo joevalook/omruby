@@ -3,20 +3,91 @@
     flex-direction: column;
 }
 
-.tweetBox{
+.tweetBox {
     display: flex;
     flex-direction: column;
 }
 
-.actionButtons{
+.actionButtons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.editDestroy{
+.editDestroy {
     display: flex;
     width: 150px;
     justify-content: space-between;
-   
+
+}
+
+.tweets {
+    border: 3px solid rgb(48, 36, 36);
+    margin-top: 50px;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tweets:hover {
+    box-shadow: 10px 5px 5px lightgray;
+}
+
+.icon1:hover {
+    color: orange;
+}
+
+.icon2:hover {
+    color: greenyellow;
+}
+
+.icon3:hover {
+    color: red;
+}
+
+.picName {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.imageBox {
+    height: 60px;
+    width: 60px
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.oppositeSide {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+
+.tweetContainer {
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(48, 36, 36);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.horizontal {
+    display: flex;
+    column-gap: 15px;
+    font-size: 15px;
+    align-items: center;
+}
+
+.small {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.sml {
+    max-width: 840px;
 }

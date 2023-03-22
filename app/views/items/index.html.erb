@@ -1,0 +1,22 @@
+<div class="container sml">
+
+  <h1>Posts</h1>
+
+<% if user_signed_in? %>
+  <%= link_to "New Post" , new_item_path, class: "btn btn-primary " %>
+<% end %>
+
+    <% for a in 1..(@items.length()) do  %>
+        <div class="card mt-3 ">
+          <div class="<%= 'post' if (@items[@items.length()-a].text.length() + @items[@items.length()-a].url.length()) > 500 %>">
+            <% post = @items[@items.length()-a]  %>
+            <%= render partial: "item", locals: { post: post} %>
+          </div>
+          <%= link_to "View Post" , post, class:"btn btn-info postButton" %>
+        </div>
+
+      <% end %>
+
+
+</div>
+
